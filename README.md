@@ -1,22 +1,26 @@
 # cljs-reify-error
-Project which reproduces [presumably] a ClojureScript compilation error
+Project which reproduces [presumably] a ClojureScript compilation error.
 
 ## Steps:
 
 1) Auto build:
 
+```
 $ lein trampoline run -m clojure.main watch.clj
+```
 
 2) Run using node.js:
 
+```
 $ node js/out.js
+```
 
 ## Expected 
 No errors.
 
 ## Actual output
 
-hey!
+<pre>hey!
 /Users/yuri/Dropbox/dev/error/js/out.js:19660
 ersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [self__.v, 
                                                                     ^
@@ -30,4 +34,4 @@ ReferenceError: self__ is not defined
     at Function.Module._load (module.js:310:12)
     at Function.Module.runMain (module.js:501:10)
     at startup (node.js:129:16)
-    at node.js:814:3
+    at node.js:814:3</pre>
